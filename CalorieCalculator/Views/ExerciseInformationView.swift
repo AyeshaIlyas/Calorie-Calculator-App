@@ -1,5 +1,5 @@
 //
-//  PersonalInformationView.swift
+//  ExerciseInformationView.swift
 //  CalorieCalculator
 //
 //  Created by Ayesha Ilyas on 3/21/22.
@@ -7,23 +7,24 @@
 
 import SwiftUI
 
-struct PersonalInformationView: View {
+struct ExerciseInformationView: View {
     @EnvironmentObject var model: CalorieCalculatorModel
-    @State var age:String = ""
-    @State var weight:String = ""
+    @State var duration:String = ""
+    @State var heartRate:String = ""
     @State var showError = false
-    @FocusState private var ageIsFocused: Bool
-    @FocusState private var weightIsFocused: Bool
+    @FocusState private var durationIsFocused: Bool
+    @FocusState private var ahrIsFocused: Bool
     var body: some View {
-        VStack (spacing: 20){
-            Text("Personal Information")
+        VStack (spacing: 20) {
+            Text("Exercise Information")
                 .font(.largeTitle)
+            
             HStack (spacing: 20) {
                 Spacer()
-                Text("Age:")
-                TextField("Enter your age", text: $age)
+                Text("Exercise Duration (min):")
+                TextField("Enter your workout duration", text: $duration)
                     .keyboardType(.decimalPad)
-                    .focused($ageIsFocused)
+                    .focused($durationIsFocused)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(maxWidth: 300.0)
                     
@@ -32,39 +33,31 @@ struct PersonalInformationView: View {
             
             HStack (spacing: 20) {
                 Spacer()
-                Text("Weight (lbs):")
-                TextField("Enter your weight", text: $weight)
-                    .focused($weightIsFocused)
+                Text("Avg. Heart Rate:")
+                TextField("Enter your heart rate", text: $heartRate)
                     .keyboardType(.decimalPad)
+                    .focused($ahrIsFocused)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(maxWidth: 300.0)
                 Spacer()
             }
             
-            Picker("Gender", selection: $model.gender) {
-                ForEach (model.genders, id: \.self) { g in
-                    Text(g)
-                }
-            }
-            .pickerStyle(.segmented)
-            .frame(width: 150)
-            
             if (showError) {
-                Text("Invalid inputs. Please enter a valid age and weight.")
+                Text("Invalid inputs. Please enter a valid time in minutes  and average heart rate.")
                     .foregroundColor(Color.red)
                     .padding()
             }
             
             Button(action: {
                 // save valid information to viewmodel object
-                if age == "" || weight == "" {
+                if duration == "" || heartRate == "" {
                     showError = true
                 } else {
                     showError = false
-                    model.age = Int(age)
-                    model.weight = Double(weight)
-                    ageIsFocused = false
-                    weightIsFocused = false
+                    model.exerciseDuration = Double(duration)
+                    model.avgHeartRate = Int(heartRate)
+                    durationIsFocused = false
+                    ahrIsFocused = false
                 }
             }) {
                 Text("Submit")
@@ -79,8 +72,8 @@ struct PersonalInformationView: View {
     }
 }
 
-struct PersonalInformationView_Previews: PreviewProvider {
+struct ExerciseInformationView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonalInformationView()
+        ExerciseInformationView()
     }
 }

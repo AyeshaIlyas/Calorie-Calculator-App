@@ -18,7 +18,7 @@ struct CalorieCalculatorTabView: View {
                     }
                 }
             
-            Text("Tab two")
+            ExerciseInformationView()
                 .tabItem {
                     VStack {
                         Image(systemName: "heart")
@@ -26,7 +26,7 @@ struct CalorieCalculatorTabView: View {
                     }
                 }
             
-            Text("Tab three")
+            CalculateCaloriesView()
                 .tabItem {
                     VStack {
                         Image(systemName: "gear")
