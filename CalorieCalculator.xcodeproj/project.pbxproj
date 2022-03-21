@@ -11,6 +11,7 @@
 		600CE0AE27E8F72000957CE1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600CE0AD27E8F72000957CE1 /* ContentView.swift */; };
 		600CE0B027E8F72300957CE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 600CE0AF27E8F72300957CE1 /* Assets.xcassets */; };
 		600CE0B327E8F72300957CE1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 600CE0B227E8F72300957CE1 /* Preview Assets.xcassets */; };
+		600CE0BC27E8F83000957CE1 /* CalorieCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600CE0BB27E8F83000957CE1 /* CalorieCalculatorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		600CE0AD27E8F72000957CE1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		600CE0AF27E8F72300957CE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		600CE0B227E8F72300957CE1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		600CE0BB27E8F83000957CE1 /* CalorieCalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieCalculatorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				600CE0AB27E8F72000957CE1 /* CalorieCalculatorApp.swift */,
-				600CE0AD27E8F72000957CE1 /* ContentView.swift */,
+				600CE0BA27E8F7E800957CE1 /* ViewModels */,
+				600CE0B927E8F7E000957CE1 /* Views */,
 				600CE0AF27E8F72300957CE1 /* Assets.xcassets */,
 				600CE0B127E8F72300957CE1 /* Preview Content */,
 			);
@@ -65,6 +68,22 @@
 				600CE0B227E8F72300957CE1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		600CE0B927E8F7E000957CE1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				600CE0AD27E8F72000957CE1 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		600CE0BA27E8F7E800957CE1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				600CE0BB27E8F83000957CE1 /* CalorieCalculatorModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				600CE0AE27E8F72000957CE1 /* ContentView.swift in Sources */,
+				600CE0BC27E8F83000957CE1 /* CalorieCalculatorModel.swift in Sources */,
 				600CE0AC27E8F72000957CE1 /* CalorieCalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
