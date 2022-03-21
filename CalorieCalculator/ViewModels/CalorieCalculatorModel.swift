@@ -21,7 +21,7 @@ class CalorieCalculatorModel: ObservableObject {
             if gender == "Female" {
                 return ((Double(a) * 0.074) - (w * 0.05741) + (Double(ahr) * 0.4472) - 20.4022) * (ed / 4.184)
             } else if gender == "Male" {
-                return ((Double(a) * 0.2017) - (w * 0.09036) + (Double(ahr) * 0.6309) - 20.4022) * (ed / 55.0969)
+                return ((Double(a) * 0.2017) - (w * 0.09036) + (Double(ahr) * 0.6309) - 55.0969) * (ed / 4.184)
             }
         }
        // unset values

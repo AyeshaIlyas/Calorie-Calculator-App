@@ -17,6 +17,8 @@ struct CalculateCaloriesView: View {
                 let caloriesBurned = model.calculateCalories()
                 if let cb = caloriesBurned {
                     caloriesBurnedString = "\(Int(cb)) calories burned"
+                } else {
+                    caloriesBurnedString = "0 calories burned"
                 }
                 
             }) {

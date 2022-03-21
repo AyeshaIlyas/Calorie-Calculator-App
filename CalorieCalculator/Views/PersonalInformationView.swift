@@ -12,7 +12,7 @@ struct PersonalInformationView: View {
     @State var age:String = ""
     @State var weight:String = ""
     @State var showError = false
-    @FocusState private var ageIsFocused: Bool
+//    @FocusState private var ageIsFocused: Bool
     @FocusState private var weightIsFocused: Bool
     var body: some View {
         VStack (spacing: 20){
@@ -23,7 +23,7 @@ struct PersonalInformationView: View {
                 Text("Age:")
                 TextField("Enter your age", text: $age)
                     .keyboardType(.decimalPad)
-                    .focused($ageIsFocused)
+//                    .focused($ageIsFocused)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(maxWidth: 300.0)
                     
@@ -63,7 +63,7 @@ struct PersonalInformationView: View {
                     showError = false
                     model.age = Int(age)
                     model.weight = Double(weight)
-                    ageIsFocused = false
+//                    ageIsFocused = false
                     weightIsFocused = false
                 }
             }) {
