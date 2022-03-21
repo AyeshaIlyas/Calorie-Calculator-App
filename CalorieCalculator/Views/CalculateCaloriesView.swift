@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct CalculateCaloriesView: View {
+    
     @EnvironmentObject var model: CalorieCalculatorModel
     @State var caloriesBurnedString = "0 calories burned"
+    
     var body: some View {
         
         VStack (spacing: 20) {

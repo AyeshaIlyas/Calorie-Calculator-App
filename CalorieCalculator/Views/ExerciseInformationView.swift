@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ExerciseInformationView: View {
+    
     @EnvironmentObject var model: CalorieCalculatorModel
     @State var duration:String = ""
     @State var heartRate:String = ""
     @State var showError = false
     @FocusState private var durationIsFocused: Bool
     @FocusState private var ahrIsFocused: Bool
+    
     var body: some View {
         VStack (spacing: 20) {
             Text("Exercise Information")
